@@ -1,0 +1,35 @@
+# Potential Field parameters
+K_ATT: 1  # Normal attraction gain (group)
+K_ATT_INLINE: 20  # Inline attraction gain (inline, leader)
+K_REP: 2000.0  # Repulsion gain
+DELTA_J: 7.0  # Base distance of influence for obstacles/neighbors
+
+# Flocking parameters
+K_COH: 0.1  # Cohesion gain
+K_ALI: 0.6  # Alignment gain
+K_SEP: 150.0  # Separation gain
+
+FLOCKING_RADIUS: 35.0  # Neighborhood radius for cohesion and alignment (Fig. 1)
+FLOCKING_ANGLE_DEGREES: 270  # Neighborhood angle, 360 for all-around (can be set to a sector, e.g., 180)
+SEPARATION_RADIUS: 10 # Smaller radius for separation [8]
+
+V_MAX: 1.5  # Maximum velocity
+V_MIN: 0.2  # Minimum velocity (to maintain motion near goal)
+
+# Line Formation parameters
+# R0, defines the edge of the congestion zone
+# Rearranging regions radii (Rn). A robot in 'inLine'/'leader' state resets to 'group'
+# if it crosses any of these boundaries. These should be ordered.
+REARRANGING_REGIONS_RADII: [50.0, 20.0, 5.0]
+
+# Simulation parameters
+DT: 0.1  # Time step for discrete simulation updates
+REACH_GOAL_RADIUS: 5.0
+NUM_ROBOTS: 10
+INITIAL_ROBOT_POS: [-120.0, -40.0]
+GOALS_POS: [[50.0, 50.0],[200.0, 150.0],[160.0, 100.0],[180.0, -120.0]]  # The goals for all robots
+ARENA_SIZE: 100  # Robots initial positions will be within a 100x100 area centered at target_pos
+NUM_SIMULATION_STEPS: 9999  # Total simulation iterations
+PLOT_X_RANGE: [-130, 250]
+PLOT_Y_RANGE: [-130, 200]
+ROBOT_MARKER_RADIUS: 2.5
